@@ -14,7 +14,7 @@ public class ProcedCheckOut {
 	public ProcedCheckOut(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-
+	//TESTGIT
 	//Adding a new item
 	@FindBy(xpath = "//*[@id=\'layer_cart\']/div[1]/div[2]/div[4]/a/span")
 	WebElement addtoCartCheckBtn;
