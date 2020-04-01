@@ -1,16 +1,20 @@
 package stepDefinitions;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import PageObjects.CreateAccountPage;
 import PageObjects.ProcedCheckOut;
 import io.cucumber.java.en.Then;
 
 public class ThenTest {
+	
 	WebDriver driver = WhenTest.driver;
-
+	CreateAccountPage cp = new CreateAccountPage(driver);
 	@Then("User should be logged correctly")
 	public void user_should_be_logged_correctly() {
 		// Write code here that turns the phrase above into concrete actions
@@ -46,16 +50,16 @@ public class ThenTest {
 		proced.validateCheckOut();
 	}
 
-	@Then("User login with aasdasd@gmail.com and pass234")
-	public void user_login_with_aasdasd_gmail_com_and_pass234() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	@Then("User login")
+	public void user_login() {
+		String expectedText ="My account";
+		assertEquals(cp.getPageHead(), expectedText);
 	}
 
 	@Then("An error message appears on the page")
 	public void an_error_message_appears_on_the_page() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		String expectedText ="Invalid email address.";
+		assertEquals(cp.getCreateErrorMessage(), expectedText);
 	}
 
 }

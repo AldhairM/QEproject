@@ -16,15 +16,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class LoadExcel {
 
-	private static String FILE_NAME = "C:/Users/test.admin/Documents/MyFirstExcel.xlsx";
 	static List<String> data = new LinkedList<String>();
 
 	public static void main(String[] args) {
 
 	}
 
+	@SuppressWarnings("deprecation")
 	public List<String> loadData(String path) {
-		this.FILE_NAME = path;
 		try {
 			FileInputStream excelFile = new FileInputStream(new File(path));
 			Workbook workbook = new XSSFWorkbook(excelFile);
@@ -37,7 +36,13 @@ public class LoadExcel {
 
 				while (cellIterator.hasNext()) {
 					Cell currentCell = (Cell) cellIterator.next();
-					data.add(currentCell.getStringCellValue());
+					if (currentCell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+                    	double data0= currentCell.getNumericCellValue();
+                        data.add(""+data0);
+                    }else if(currentCell.getCellType()==Cell.CELL_TYPE_STRING){
+                    	String data0= currentCell.getStringCellValue();
+                        data.add(data0);
+                    }
 				}
 			}
 		} catch (FileNotFoundException var8) {

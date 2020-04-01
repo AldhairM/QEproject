@@ -16,7 +16,6 @@ public class GivenTest {
 
 	@Given("User login {string} or {string}")
 	public void user_login(String email, String password) {
-		// Write code here that turns the phrase above into concrete actions
 		lg = new LogInPage(driver);
 		lg.go();
 		lg.sendEmail(email);
@@ -24,11 +23,12 @@ public class GivenTest {
 		lg.clickSubmit();
 	}
 	
-	@Given("User enter an aasdasd@gmail.com on new emailLabel")
-	public void user_enter_an_aasdasd_gmail_com_on_new_emailLabel() {
-	    // Write code here that turns the phrase above into concrete actions
+	@Given("User enter an {string} on new emailLabel")
+	public void user_enter_an_on_new_emailLabel(String newEmail) {
 		lg = new LogInPage(driver);
-		
+		lg.go();
+		lg.sendNewEmail(newEmail);
+		lg.clickSubmit();
 	}
 
 }

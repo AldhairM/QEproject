@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
+import PageObjects.CreateAccountPage;
 import PageObjects.LogInPage;
 import PageObjects.ProcedCheckOut;
 import PageObjects.WomenPage;
@@ -59,16 +60,17 @@ public class WhenTest {
 		lp.clickSubmitCreate();
 	}
 
-	@When("User enters all the success on form and pass234")
-	public void user_enters_all_the_success_on_form_and_pass234() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	@When("User enters all the {string} on form,{string} and {string}")
+	public void user_enters_all_the_on_form_and(String path, String email, String password) {
+		CreateAccountPage cp = new CreateAccountPage(driver);
+		cp.inputForm(path, email, password);
+		cp.submitForm();
 	}
 
 	@When("User register the information")
 	public void user_register_the_information() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		CreateAccountPage cp = new CreateAccountPage(driver);
+		cp.submitForm();
 	}
 
 }

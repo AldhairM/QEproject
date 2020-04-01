@@ -6,9 +6,9 @@ Feature: Title of your feature
   Scenario Outline: User will create a new account 
     Given User enter an <email> on new emailLabel
 		When User press createAnAccountBtn
-		And User enters all the <information> on form and <password>
+		And User enters all the <information> on form,<email> and <password>
 		And User register the information	
-		Then User login with <email> and <password>
+		Then User login
 
     Examples: 
       | 			email			  	| password	 | 		information  |
@@ -22,5 +22,5 @@ Feature: Title of your feature
 
     Examples: 
       | 			email			  |
-      | aasdasd@gmail.com |  
+      | "aasdasd@gmail.com" |  
 
