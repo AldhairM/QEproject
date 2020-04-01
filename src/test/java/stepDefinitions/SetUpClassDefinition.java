@@ -16,7 +16,7 @@ public class SetUpClassDefinition {
 	@Before
 	public void setUp() {
 		// Write code here that turns the phrase above into concrete actions
-		baseUrl = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
+		baseUrl = "http://automationpractice.com/http://automationpractice.com/index.php";
 		
 		System.setProperty("webdriver.chrome.driver", "src\\drivers\\chromedriver.exe");
 		driver = new ChromeDriver();

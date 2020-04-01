@@ -15,6 +15,7 @@ public class WhenTest {
 	LogInPage lg;
 	static WebDriver driver = GivenTest.driver;
 	static Actions action = new Actions(driver);
+
 	@When("User enters username as {string}")
 	public void user_enters_username_as(String email) {
 		lg = new LogInPage(driver);
@@ -40,7 +41,7 @@ public class WhenTest {
 	}
 
 	@When("User selects a product from the women page")
-	public void user_selects_a_product_from_the_women_page(){
+	public void user_selects_a_product_from_the_women_page() {
 		WomenPage wPage = new WomenPage(driver);
 		wPage.getBarMenuElement(Titles.WOMEN);
 		wPage.selectClothe(1, driver);
@@ -51,5 +52,23 @@ public class WhenTest {
 		ProcedCheckOut proced = new ProcedCheckOut(driver);
 		proced.statementsProced();
 	}
-	
+
+	@When("User press createAnAccountBtn")
+	public void user_press_createAnAccountBtn() {
+		LogInPage lp = new LogInPage(driver);
+		lp.clickSubmitCreate();
+	}
+
+	@When("User enters all the success on form and pass234")
+	public void user_enters_all_the_success_on_form_and_pass234() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User register the information")
+	public void user_register_the_information() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
 }

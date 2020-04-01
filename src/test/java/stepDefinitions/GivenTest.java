@@ -18,8 +18,17 @@ public class GivenTest {
 	public void user_login(String email, String password) {
 		// Write code here that turns the phrase above into concrete actions
 		lg = new LogInPage(driver);
+		lg.go();
 		lg.sendEmail(email);
 		lg.send(password);
 		lg.clickSubmit();
 	}
+	
+	@Given("User enter an aasdasd@gmail.com on new emailLabel")
+	public void user_enter_an_aasdasd_gmail_com_on_new_emailLabel() {
+	    // Write code here that turns the phrase above into concrete actions
+		lg = new LogInPage(driver);
+		
+	}
+
 }
