@@ -19,6 +19,9 @@ public class WomenPage {
 	public WomenPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(how = How.CSS, using = "a[title='Proceed to checkout']")
+	WebElement procedChkOutBtn;
 
 	@FindBy(className = "product_img_link")
 	List<WebElement> productList;
@@ -26,35 +29,49 @@ public class WomenPage {
 	@FindBy(xpath = "//span[text()='Add to cart']")
 	List<WebElement> addCartBtn;
 
+	@FindBy(xpath = "//span[text()='More']")
+	List<WebElement> moreBtn;
 	// Declare my head bar
-	@FindBy(how = How.XPATH, using = "//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/child::li")
-	List<WebElement> barMenu;
+	@FindBy(id="quantity_wanted")
+	WebElement quantityLbl;
 
-	// Select by specific category
-	public WebElement getBarMenuElement(Titles options) {
-		WebElement element;
-		switch (options) {
-		case WOMEN:
-			element = barMenu.get(0);
-		case DRESSES:
-			element = barMenu.get(1);
-		case TSHIRT:
-			element = barMenu.get(2);
-		default:
-			element = null;
-		}
-
-		return element;
-	}
-
-	public void selectClothe(int index, WebDriver driver) {
+	@FindBy(xpath = "//a[@title=\'Women\']")
+	WebElement womenCatalog;
+	
+	public void selectClothetoAdd(int index, WebDriver driver) {
+		womenCatalog.click();
 		if (index <= productList.size()) {
-			WebElement t = productList.get(index);
+			WebElement item = productList.get(index);
 			Actions action = new Actions(driver);
-			action.moveToElement(t).perform();
+			action.moveToElement(item).perform();
 			addCartBtn.get(index).click();
 		}else{
 			System.out.println("Index Error");
 		}
+	}
+	
+	public void procedToCheckOutBtn() {
+		procedChkOutBtn.click();
+	}
+	
+
+	public void selectClothetoMore(int index, WebDriver driver) {
+		womenCatalog.click();
+		if (index <= productList.size()) {
+			WebElement item = productList.get(index);
+			Actions action = new Actions(driver);
+			action.moveToElement(item).perform();
+			moreBtn.get(index).click();
+		}else{
+			System.out.println("Index Error");
+		}
+	}
+	
+	
+	public void addClothe(int quantity) {
+		quantityLbl.clear();
+		quantityLbl.sendKeys(String.valueOf(quantity));
+		addCartBtn.get(0).click();
+		procedChkOutBtn.click();
 	}
 }

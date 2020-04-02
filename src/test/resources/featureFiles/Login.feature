@@ -25,8 +25,8 @@ Feature: Log in Page
 						invalid characters
 	Given User is on login page
 	When User enters username as "123asdlñ!"
-	And User click out of the username
-	Then An visual error arraised
+	And User click on sign in buttom
+	Then An error message Arraised
 	
 	@BlankLabels
   Scenario: User should not be able to login

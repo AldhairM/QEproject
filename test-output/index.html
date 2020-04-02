@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\test.admin\AppData\Local\Temp\testng-eclipse-287780150\testng-customsuite.xml</span>
+                    <span>C:\Users\test.admin\AppData\Local\Temp\testng-eclipse--1468926792\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testRunners.FirstRunner" hash-for-method="runScenario(&quot;User shold proced to CheckOut only a product&quot;, &quot;Verify all the ways to buy a product&quot;)">runScenario("User shold proced to CheckOut only a product", "Verify all the ways to buy a product")</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testRunners.ThirdRunner" hash-for-method="runScenario(&quot;User will create a new account&quot;, &quot;Title of your feature&quot;)">runScenario("User will create a new account", "Title of your feature")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,43 +120,23 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testRunners.FirstRunner</span>
+              <span class="class-name">testRunners.ThirdRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User shold proced to CheckOut only a product&quot;, &quot;Verify all the ways to buy a product&quot;)">
-                  </a> <!-- runScenario("User shold proced to CheckOut only a product", "Verify all the ways to buy a product") -->
+                  <a name="runScenario(&quot;User will create a new account&quot;, &quot;Title of your feature&quot;)">
+                  </a> <!-- runScenario("User will create a new account", "Title of your feature") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User shold proced to CheckOut only a product", "Verify all the ways to buy a product")</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=80.0.3987.149)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-AG6NOTN&apos;, ip: &apos;192.168.1.68&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\TEST~1.ADM\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:12821}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 91a0d3097c924be9f9cc58da697e6eae
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy20.click(Unknown Source)
-	at PageObjects.ProcedCheckOut.statementsProced(ProcedCheckOut.java:48)
-	at stepDefinitions.WhenTest.user_validate_all_CheckOut_statements(WhenTest.java:52)
-	at ✽.User validate all CheckOut statements(file:///C:/Users/test.admin/Documents/Proyecto%20Final/QEproject/src/test/resources/featureFiles/CheckOut.feature:8)
+                  <span class="parameters">("User will create a new account", "Title of your feature")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [My account] but found [CREATE AN ACCOUNT]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at stepDefinitions.ThenTest.user_login(ThenTest.java:44)
+	at ✽.User login(file:///C:/Users/test.admin/WorkspaceAutomate/SeleniumCase/src/test/resources/featureFiles/CreateAnAccount.feature:11)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -168,7 +148,7 @@ Session ID: 91a0d3097c924be9f9cc58da697e6eae
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\test.admin\AppData\Local\Temp\testng-eclipse-287780150\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\test.admin\AppData\Local\Temp\testng-eclipse--1468926792\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -177,7 +157,7 @@ Session ID: 91a0d3097c924be9f9cc58da697e6eae
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testRunners.FirstRunner&quot;/&gt;
+      &lt;class name=&quot;testRunners.ThirdRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -228,13 +208,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'testRunners.FirstRunner')
-data.setCell(0, 3, 36056);
+data.setCell(0, 2, 'testRunners.ThirdRunner')
+data.setCell(0, 3, 24111);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -260,7 +240,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testRunners.FirstRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testRunners.ThirdRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
                 <span class="method-start">0 ms</span>
@@ -268,12 +248,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("User shold proced to CheckOut only a product", "Verify all the ways to buy a product")</span>
-                <span class="method-start">346 ms</span>
+                <span class="method-name">runScenario("User will create a new account", "Title of your feature")</span>
+                <span class="method-start">356 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">36417 ms</span>
+                <span class="method-start">24482 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

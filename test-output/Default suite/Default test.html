@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 30 20:19:31 CST 2020</td>
+<td>Started on:</td><td>Thu Apr 02 01:22:29 CST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>36 seconds (36459 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24505 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,67 +75,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testRunners.FirstRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.FirstRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User shold proced to CheckOut only a product", "Verify all the ways to buy a product"</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=80.0.3987.149)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-AG6NOTN&apos;, ip: &apos;192.168.1.68&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\TEST~1.ADM\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:12821}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 91a0d3097c924be9f9cc58da697e6eae
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy20.click(Unknown Source)
-	at PageObjects.ProcedCheckOut.statementsProced(ProcedCheckOut.java:48)
-	at stepDefinitions.WhenTest.user_validate_all_CheckOut_statements(WhenTest.java:52)
-	at ?.User validate all CheckOut statements(file:///C:/Users/test.admin/Documents/Proyecto%20Final/QEproject/src/test/resources/featureFiles/CheckOut.feature:8)
-</pre></div><a href='#' onClick='toggleBox("stack-trace66724371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace66724371'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=80.0.3987.149)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-AG6NOTN&apos;, ip: &apos;192.168.1.68&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\TEST~1.ADM\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:12821}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 91a0d3097c924be9f9cc58da697e6eae
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy20.click(Unknown Source)
-	at PageObjects.ProcedCheckOut.statementsProced(ProcedCheckOut.java:48)
-	at stepDefinitions.WhenTest.user_validate_all_CheckOut_statements(WhenTest.java:52)
-	at ?.User validate all CheckOut statements(file:///C:/Users/test.admin/Documents/Proyecto%20Final/QEproject/src/test/resources/featureFiles/CheckOut.feature:8)
+<td title='testRunners.ThirdRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.ThirdRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User will create a new account", "Title of your feature"</td>
+<td><div><pre>java.lang.AssertionError: expected [My account] but found [CREATE AN ACCOUNT]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at stepDefinitions.ThenTest.user_login(ThenTest.java:44)
+	at ?.User login(file:///C:/Users/test.admin/WorkspaceAutomate/SeleniumCase/src/test/resources/featureFiles/CreateAnAccount.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1767674765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1767674765'><pre>java.lang.AssertionError: expected [My account] but found [CREATE AN ACCOUNT]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at stepDefinitions.ThenTest.user_login(ThenTest.java:44)
+	at ?.User login(file:///C:/Users/test.admin/WorkspaceAutomate/SeleniumCase/src/test/resources/featureFiles/CreateAnAccount.feature:11)
 </pre></div></td>
-<td>36</td>
-<td>testRunners.FirstRunner@15d0c81b</td></tr>
+<td>24</td>
+<td>testRunners.ThirdRunner@752325ad</td></tr>
 </table><p>
 </body>
 </html>

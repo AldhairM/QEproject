@@ -3,17 +3,14 @@ package PageObjects;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class LogInPage {
 	public LogInPage(WebDriver driver) {
-		/*PageFactory deja mi driver a la escucha debido a que 
-		pueden existir elementos los cuales no pueden existir
-		hasta que ocurra. Se utiliza para encontrar cualquier
-		tipo de elemento*/
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(className="login")
+	@FindBy(xpath="//a[@class=\"login\"]")
 	WebElement signInPage;
 	
 	@FindBy(id = "email")
@@ -34,6 +31,11 @@ public class LogInPage {
 	@FindBy(id="SubmitCreate")
 	WebElement submitCreateLbl;	
 	
+	@FindBy(xpath="//*[@id=\'create_account_error\']/ol/li")
+	WebElement errorEmailMessage;
+	
+	@FindBy(className = "page-heading")
+	WebElement lblHeading;
 	public void go() {
 		signInPage.click();
 	}	
@@ -66,5 +68,12 @@ public class LogInPage {
 		footPage.click();
 	}
 	
+	public void errorMsg() {
+		Assert.assertTrue(errorEmailMessage.getText().equals("There is 1 error"));
+	}
+	
+	public void errorTitle() {
+		Assert.assertTrue(lblHeading.getText().equals("MY ACCOUNT"));
+	}
 }
 

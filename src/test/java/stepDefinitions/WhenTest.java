@@ -1,7 +1,5 @@
 package stepDefinitions;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
@@ -9,14 +7,17 @@ import PageObjects.CreateAccountPage;
 import PageObjects.LogInPage;
 import PageObjects.ProcedCheckOut;
 import PageObjects.WomenPage;
-import PageObjects.WomenPage.Titles;
 import io.cucumber.java.en.When;
 
 public class WhenTest {
 	LogInPage lg;
-	static WebDriver driver = GivenTest.driver;
+	public static WebDriver driver = GivenTest.driver;
 	static Actions action = new Actions(driver);
-
+	
+	/**
+	 * LogIn Methods
+	 */
+	
 	@When("User enters username as {string}")
 	public void user_enters_username_as(String email) {
 		lg = new LogInPage(driver);
@@ -41,12 +42,9 @@ public class WhenTest {
 		lg.clickOut();
 	}
 
-	@When("User selects a product from the women page")
-	public void user_selects_a_product_from_the_women_page() {
-		WomenPage wPage = new WomenPage(driver);
-		wPage.getBarMenuElement(Titles.WOMEN);
-		wPage.selectClothe(1, driver);
-	}
+	/*
+	 * CheckOut Methods
+	 */
 
 	@When("User validate all CheckOut statements")
 	public void user_validate_all_CheckOut_statements() {
@@ -63,6 +61,7 @@ public class WhenTest {
 	@When("User enters all the {string} on form,{string} and {string}")
 	public void user_enters_all_the_on_form_and(String path, String email, String password) {
 		CreateAccountPage cp = new CreateAccountPage(driver);
+		System.out.println("I went");
 		cp.inputForm(path, email, password);
 		cp.submitForm();
 	}
@@ -72,5 +71,22 @@ public class WhenTest {
 		CreateAccountPage cp = new CreateAccountPage(driver);
 		cp.submitForm();
 	}
+	
+	
+	@When("User clicks on procedToCheckOutBtn sometimes")
+	public void user_clicks_on_procedToCheckOutBtn_sometimes() {
+		ProcedCheckOut pco = new ProcedCheckOut(driver);
+		pco.statementsProced();
+	}
 
+	/**
+	 * Catalog Methods
+	 */
+	
+	@When("User should add {int} items on cart")
+	public void user_should_add_items_on_cart(Integer quantity) {
+		WomenPage wPage = new WomenPage(driver);
+		wPage.addClothe(quantity);
+	}
+	
 }

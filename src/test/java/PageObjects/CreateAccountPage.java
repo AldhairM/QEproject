@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import SimileTools.LoadExcel;
+import UniqueTools.LoadExcel;
 
 public class CreateAccountPage {
 
@@ -50,8 +50,8 @@ public class CreateAccountPage {
 			}
 		counter++;
 		}
-		state.selectByValue(data.get(-2));
-		country.selectByValue("21");
+		state.selectByIndex(1);
+		country.selectByIndex(1);;		
 	}
 	
 	public void submitForm() {

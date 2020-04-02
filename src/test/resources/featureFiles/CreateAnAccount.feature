@@ -12,15 +12,15 @@ Feature: Title of your feature
 
     Examples: 
       | 			email			  	| password	 | 		information  |
-      | "aasdasd@gmail.com" |  "pass234" |	 "success"		 |
+      | "aaaasdasd@asdas.com" |  "pass234" |	 "src//data//data.xlsx"	 |
   
   @CreateInvalidAccount
-  Scenario Outline: User try to create a new account
+  Scenario Outline: User try to create a new account with an email registered
     Given User enter an <email> on new emailLabel
 		When User press createAnAccountBtn
 		Then An error message appears on the page
 
     Examples: 
       | 			email			  |
-      | "aasdasd@gmail.com" |  
+      | "test800@hotmail.com" |  
 
