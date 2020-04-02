@@ -43,8 +43,8 @@ public class ThenTest {
 
 	@Then("User login")
 	public void user_login() {
-		String expectedText ="My account";
-		assertEquals(cp.getPageHead(), expectedText);
+		LogInPage lp = new LogInPage(driver);
+		lp.errorTitle();
 	}
 
 	

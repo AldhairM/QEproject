@@ -18,8 +18,35 @@ public class CreateAccountPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(className = "required form-group")
-	List<WebElement> formLbls;
+	@FindBy(id="customer_firstname")
+	WebElement nameLbl;
+	
+	@FindBy(id="customer_lastname")
+	WebElement lastNamtetLbl;
+	
+	@FindBy(id="email")
+	WebElement emailtLbl;
+	
+	@FindBy(id="passwd")
+	WebElement passwordLbl;
+	
+	@FindBy(id="firstname")
+	WebElement firstLbl;
+	
+	@FindBy(id="lastname")
+	WebElement lastLbl;
+	
+	@FindBy(id ="address1")
+	WebElement addres1Lbl;
+	
+	@FindBy(id="city")
+	WebElement cityLbl;
+	
+	@FindBy(id ="postcode")
+	WebElement zipLbl;
+	
+	@FindBy(id ="phone_mobile")
+	WebElement phoneLbl;
 	
 	@FindBy(name = "id_state")
 	WebElement states;
@@ -36,25 +63,28 @@ public class CreateAccountPage {
 	@FindBy(id="create_account_error")
 	WebElement errorCreateMessage;
 	
-	public void inputForm(String path, String email, String pass) {
+	public void inputForm(String path, String email, String pass){
 		Select state = new Select(states);
 		Select country = new Select(countries);
 		LoadExcel tool = new LoadExcel();
 		List<String> data = tool.loadData(path);
-		int counter = 1;
-		for (WebElement e :formLbls) {
-			if(counter == 2||counter == 3) {
-				e.sendKeys((counter == 2 ) ? email:pass);
-			}else {
-				e.sendKeys(data.get(counter));
-			}
-		counter++;
-		}
+		nameLbl.sendKeys(data.get(1));
+		lastNamtetLbl.sendKeys(data.get(2));
+		emailtLbl.clear();
+		emailtLbl.sendKeys(email);
+		passwordLbl.sendKeys(pass);
+		firstLbl.sendKeys(data.get(5));
+		lastLbl.sendKeys(data.get(6));
+		addres1Lbl.sendKeys(data.get(7));
+		cityLbl.sendKeys(data.get(8));
+		zipLbl.sendKeys(data.get(9));
+		phoneLbl.sendKeys(data.get(10));
 		state.selectByIndex(1);
-		country.selectByIndex(1);;		
+		country.selectByIndex(1);
+
 	}
 	
-	public void submitForm() {
+	public void submitForm(){
 		registerBtn.click();
 	}
 	

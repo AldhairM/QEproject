@@ -1,7 +1,11 @@
 package stepDefinitions;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 import PageObjects.CreateAccountPage;
 import PageObjects.LogInPage;
@@ -59,7 +63,7 @@ public class WhenTest {
 	}
 
 	@When("User enters all the {string} on form,{string} and {string}")
-	public void user_enters_all_the_on_form_and(String path, String email, String password) {
+	public void user_enters_all_the_on_form_and(String path, String email, String password){
 		CreateAccountPage cp = new CreateAccountPage(driver);
 		System.out.println("I went");
 		cp.inputForm(path, email, password);
@@ -67,7 +71,7 @@ public class WhenTest {
 	}
 
 	@When("User register the information")
-	public void user_register_the_information() {
+	public void user_register_the_information(){
 		CreateAccountPage cp = new CreateAccountPage(driver);
 		cp.submitForm();
 	}

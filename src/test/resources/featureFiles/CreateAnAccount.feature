@@ -12,7 +12,7 @@ Feature: Title of your feature
 
     Examples: 
       | 			email			  	| password	 | 		information  |
-      | "aaaasdasd@asdas.com" |  "pass234" |	 "src//data//data.xlsx"	 |
+      | "artdasd@heyyou.com" |  "pass234" |	 "src//data//data.xlsx"	 |
   
   @CreateInvalidAccount
   Scenario Outline: User try to create a new account with an email registered
